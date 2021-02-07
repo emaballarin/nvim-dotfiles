@@ -63,7 +63,6 @@ endif
 filetype plugin on
 syntax enable
 
-
 " auto-install missing packages on startup
 if dein#check_install()
     call dein#install()
