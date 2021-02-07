@@ -1,10 +1,11 @@
 " init.vim contains all of the initialization plugins for vim note that this
 " has to be sourced second since dein needs to run its scripts first. This
 " contains misc startup settings for vim
-let g:python3_host_prog = '~/.local/share/nvim/.venv/bin/python3'
+
+let g:python3_host_prog = '/usr/bin/python3'
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-set shell=/bin/sh
+set shell=/usr/bin/fishks
 
 " Enable syntax highlighting
 syntax on
@@ -143,3 +144,6 @@ function! Fzf_dev(qargs)
 endfunction
 
 let g:suda_smart_edit = 1
+
+" GUI Font
+set guifont=JetBrainsMono\ Nerd\ Font:h11

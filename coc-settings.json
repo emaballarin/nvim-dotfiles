@@ -6,7 +6,9 @@
                 "start"
             ],
             "filetypes": [
-                "sh"
+                "sh",
+                "bash",
+                "zsh"
             ],
             "ignoredRootPaths": [
                 "~"
@@ -18,10 +20,36 @@
                 "--lsp"
             ],
             "rootPatterns": [
+                "*.cabal",
                 "stack.yaml",
+                "cabal.project",
+                "package.yaml",
                 ".stack.yaml",
                 "cabal.config",
+                ".hie-bios",
+                "BUILD.bazel"
+            ],
+            "filetypes": [
+                "hs",
+                "lhs",
+                "haskell"
+            ],
+            "initializationOptions": {
+                "languageServerHaskell": {}
+            }
+        },
+        "haskell": {
+            "command": "haskell-language-server-wrapper",
+            "args": [
+                "--lsp"
+            ],
+            "rootPatterns": [
+                "*.cabal",
+                "stack.yaml",
+                "cabal.project",
                 "package.yaml",
+                ".stack.yaml",
+                "cabal.config",
                 ".hie-bios",
                 "BUILD.bazel"
             ],
@@ -47,11 +75,15 @@
                 "cpp",
                 "cuda",
                 "objc",
-                "objcpp"
+                "objcpp",
+                "cxx"
             ],
             "rootPatterns": [
                 ".ccls-root",
-                "compile_commands.json"
+                "compile_commands.json",
+                ".vim/",
+                ".git/",
+                ".hg/"
             ],
             "initializationOptions": {
                 "cache": {
@@ -59,13 +91,28 @@
                 },
                 "client": {
                     "snippetSupport": true
+                },
+                "highlight": {
+                    "lsRanges": true
                 }
             }
-        }
+        },
+        "golang": {
+            "command": "gopls",
+            "rootPatterns": [
+                "go.mod",
+                ".vim/",
+                ".git/",
+                ".hg/"
+            ],
+            "filetypes": [
+                "go"
+            ]
+        },
     },
     "coc.source.around.enable": false,
     "coc.source.buffer.enable": false,
-    "rust-analyzer.serverPath": "/usr/local/bin/rust-analyzer",
+    "rust-analyzer.serverPath": "/usr/bin/rust-analyzer",
     "python.formatting.provider": "black",
     "python.pythonPath": "python3"
 }

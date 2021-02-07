@@ -120,6 +120,7 @@ nmap <leader>qf  <Plug>(coc-fix-current)
 nnoremap <Leader>v :vsplit<CR>
 nnoremap <Leader>h :split<CR>
 
+
 " s won't clobber the register
 nnoremap s "_d
 

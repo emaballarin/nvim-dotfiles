@@ -4,7 +4,7 @@ endif
 
 " append to runtime path
 " Required:
-set runtimepath+=/usr/local/opt/fzf
+set runtimepath+=/usr/bin/fzf
 set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
 if dein#load_state('~/.cache/dein')
@@ -32,6 +32,7 @@ if dein#load_state('~/.cache/dein')
     call dein#add('neomutt/neomutt.vim')
     call dein#add('junegunn/fzf.vim')
     call dein#add('christoomey/vim-tmux-navigator')
+    call dein#add('plasticboy/vim-markdown')
     call dein#add('jamessan/vim-gnupg')
     call dein#add('justinmk/vim-dirvish')
     call dein#add('neoclide/coc.nvim', {'rev': 'release'})
@@ -45,6 +46,11 @@ if dein#load_state('~/.cache/dein')
     call dein#add('godlygeek/tabular')
     call dein#add('vim-pandoc/vim-pandoc')
     call dein#add('vim-pandoc/vim-pandoc-syntax')
+    call dein#add('airblade/vim-gitgutter')
+    call dein#add('Raimondi/delimitMate')
+    call dein#add('AndrewRadev/linediff.vim')
+    call dein#add('jackguo380/vim-lsp-cxx-highlight')
+    call dein#add('ryanoasis/vim-devicons')
     call dein#add('mhinz/vim-startify')
     call dein#add('octol/vim-cpp-enhanced-highlight')
     call dein#add('cespare/vim-toml')
@@ -56,6 +62,7 @@ endif
 
 filetype plugin on
 syntax enable
+
 
 " auto-install missing packages on startup
 if dein#check_install()

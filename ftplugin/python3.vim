@@ -1,6 +1,6 @@
-set tabstop=8
+set tabstop=4
 set expandtab
 set shiftwidth=4
 set softtabstop=4
 setlocal signcolumn=yes
-set textwidth=100
+set textwidth=120
