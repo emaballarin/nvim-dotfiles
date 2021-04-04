@@ -1,5 +1,19 @@
 {
     "languageserver": {
+        "bash": {
+            "command": "bash-language-server",
+            "args": [
+                "start"
+            ],
+            "filetypes": [
+                "sh",
+                "bash",
+                "zsh"
+            ],
+            "ignoredRootPaths": [
+                "~"
+            ]
+        },
         "hls": {
             "command": "haskell-language-server-wrapper",
             "args": [
@@ -48,8 +62,14 @@
                 "languageServerHaskell": {}
             }
         },
+        "lisp": {
+            "command": "cl-lsp",
+            "filetypes": [
+                "lisp"
+            ]
+        },
         "ccls": {
-            "command": "/usr/local/opt/llvm/bin/clangd",
+            "command": "/usr/bin/clangd",
             "filetypes": [
                 "c",
                 "cpp",
@@ -77,19 +97,25 @@
                 }
             }
         },
-        "lisp": {
-            "command": "cl-lsp",
+        "golang": {
+            "command": "gopls",
+            "rootPatterns": [
+                "go.mod",
+                ".vim/",
+                ".git/",
+                ".hg/"
+            ],
             "filetypes": [
-                "lisp"
+                "go"
             ]
-        }
+        },
     },
     "coc.source.around.enable": false,
     "coc.source.buffer.enable": false,
     "rust-analyzer.cargo.loadOutDirsFromCheck": true,
     "rust-analyzer.procMacro.enable": true,
     "python.formatting.provider": "black",
-    "python.pythonPath": "python3",
+    "python.pythonPath": "/home/emaballarin/bin/rddlpython",
     "sh.highlightParsingErrors": true,
-    "rust-analyzer.server.path": "rust-analyzer"
+    "rust-analyzer.serverPath": "/usr/bin/rust-analyzer"
 }

@@ -4,7 +4,7 @@
 let g:python3_host_prog = '/usr/bin/python3'
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-set shell=/usr/local/bin/fish
+set shell=/usr/bin/fishks
 
 " Enable syntax highlighting
 syntax on
@@ -38,7 +38,7 @@ set expandtab
 set softtabstop=4 " softtabstop, makes spaces feel like tabs when deleting
 
 " underline cursor instead of highlight
-set cursorline 
+set cursorline
 " hi clear CursorLine
 " hi CursorLine gui=underline cterm=underline
 
